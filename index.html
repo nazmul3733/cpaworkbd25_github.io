@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cpm Work Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="page-1" class="page">
+        <header>
+            <h1>Cpm Work Online</h1>
+            <img src="logo.png" alt="Logo">
+        </header>
+        <h2>Welcome To The Freelancing Bot</h2>
+        <button class="yellow-btn" onclick="showPage('page-2')">Registration</button>
+        <button class="yellow-btn" onclick="showPage('page-3')">Work Now</button>
+        <button class="blue-btn" onclick="showPage('admin-panel')">Admin Panel</button>
+    </div>
+
+    <div id="page-2" class="page" style="display:none">
+        <header>
+            <h1>Registration</h1>
+        </header>
+        <form id="registration-form">
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" required><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
+            <label for="bkash-number">Bkash Number:</label>
+            <input type="text" id="bkash-number" required><br>
+            <button type="button" class="yellow-btn" onclick="registerUser()">Registration</button>
+        </form>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <div id="page-3" class="page" style="display:none">
+        <header>
+            <h1>Search Profile</h1>
+        </header>
+        <form id="search-form">
+            <label for="search-username">Search Username:</label>
+            <input type="text" id="search-username" required><br>
+            <button type="button" onclick="searchProfile()">Search</button>
+        </form>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <div id="page-4" class="page" style="display:none">
+        <header>
+            <h1>Cpm Work Online</h1>
+        </header>
+        <div id="user-details">
+            <h2 id="user-name"></h2>
+            <p id="user-username"></p>
+            <p id="user-serial"></p>
+            <button class="yellow-btn" onclick="openImpressionLink()">Impression</button>
+            <button class="yellow-btn" onclick="openSignUpLink()">Sign Up</button>
+        </div>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <div id="admin-panel" class="page" style="display:none">
+        <header>
+            <h1>Admin Panel</h1>
+        </header>
+        <input type="password" id="admin-password" placeholder="Enter password">
+        <button onclick="checkAdminPassword()">Confirm</button>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <div id="user-list" class="page" style="display:none">
+        <header>
+            <h1>User Lists</h1>
+        </header>
+        <div id="users"></div>
+        <button onclick="goBack()">Back</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
